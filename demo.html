@@ -10,20 +10,17 @@
         <script src="split.js" type="text/javascript"></script>
     </head>
     <body>
-        <div class="split-pane-vertical">
+        <div id="split1">
                 <div class="split-component-1" style="width: 280px; background: #B7CEE8;">
                 </div>
-                <div class="split-handle"></div>
                 <div class="split-component-2">
-                    <div class="split-pane-horizontal split-component-fill">
+                    <div id="split2" class="split-component-fill">
                             <div class="split-component-1" style="height: 280px; background: #E8D9B7;">
                             </div>
-                            <div class="split-handle"></div>
                             <div class="split-component-2">
-                                    <div class="split-pane-vertical split-component-fill">
+                                    <div id="split3" class="split-component-fill">
                                             <div class="split-component-1" style="background: #E8B8B7;" >
                                             </div>
-                                            <div class="split-handle"></div>
                                             <div class="split-component-2"  style="background: #C4E8B7;">
                                             </div>
                                     </div>
@@ -32,9 +29,11 @@
                 </div>
         </div>
     
-        <script>
+        <script> 
             $(document).ready(function(){
-         initializeSplitPanes();
+                $("#split1").splitIt("vertical");
+                $("#split2").splitIt("horizontal");
+                $("#split3").splitIt("vertical");
             });
         </script>
     </body>
